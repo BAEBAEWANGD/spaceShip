@@ -67,7 +67,6 @@ function move() {
     for(let i = 0; i < splits.length; i ++){
         showSlipts(i);
     }
-
     for(let j = 0; j < bullets.length ; j ++) {
         showBullets(j);
     }
@@ -133,4 +132,14 @@ function bulletStrike() {
 
 var m = setInterval(move, 50);
 
-
+function newGame() {
+    clearInterval(m);
+    m = setInterval(move, 50);
+    spaceShip = {x: 145, y: 252};
+    splits = [];
+    bullets = [];
+    pressLeft = false;
+    pressRight = false;
+    pressUp = false;
+    pressDown = false;
+}
